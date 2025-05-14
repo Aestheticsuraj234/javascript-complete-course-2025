@@ -1,254 +1,139 @@
-## 🔤 1. What is a String in JavaScript?
+## 📝 JavaScript Strings Worksheet
 
-A **string** is a **primitive data type** used to represent text. Strings are **immutable**, meaning once created, their content **cannot be changed**—any operation that seems to modify a string returns a **new string**.
-
----
-
-## 🛠 2. How to Create Strings
-
-```js
-let str1 = 'Hello';      // Single quotes
-let str2 = "World";      // Double quotes
-let str3 = `Hello ${str2}`; // Template literals (backticks)
-```
-
-### ✅ Best Practice
-
-Use **template literals (\`)** when you need interpolation or multi-line strings.
-
-```js
-let name = "John";
-let greeting = `Hi, ${name}!`;
-```
+### Instructions:
+- Answer the following questions based on your understanding of JavaScript strings and their methods.
+- Questions are arranged from **easy** to **hard**.
+- Write code where required and explain your reasoning briefly.
 
 ---
 
-## 🔁 3. Strings are Immutable
+### **Easy (1–7)**
 
-```js
-let str = "Hello";
-str[0] = 'Y';      // ❌ Doesn't change the string
-console.log(str);  // "Hello"
-```
+**1.**  
+What is a string in JavaScript? Give two ways to declare a string[4].
 
 ---
 
-## 📏 4. String Properties
-
-* **`length`** – returns the number of characters in a string.
-
-```js
-let text = "JavaScript";
-console.log(text.length);  // 10
-```
+**2.**  
+Are JavaScript strings mutable or immutable? What does that mean[5][6]?
 
 ---
 
-## 🧰 5. Common String Methods (at least 10+)
+**3.**  
+How do you find the length of a string called `message`[5]?
 
 ---
 
-### 1. `charAt(index)`
-
-Returns the character at the specified index.
-
+**4.**  
+What will this code output?  
 ```js
-"JavaScript".charAt(4);  // 'S'
+let str = "HELLO";
+console.log(str.charAt(1));
 ```
+_Explain your answer_[5][6]._
 
 ---
 
-### 2. `charCodeAt(index)`
-
-Returns the Unicode of the character at a given index.
-
-```js
-"A".charCodeAt(0);  // 65
-```
+**5.**  
+Write code to check if the string `"JavaScript"` contains the substring `"Script"`[6].
 
 ---
 
-### 3. `slice(start, end?)`
-
-Extracts a section of a string and returns it as a new string.
-
-```js
-"Hello World".slice(0, 5);  // "Hello"
-"Hello World".slice(-5);    // "World"
-```
+**6.**  
+How do you convert the string `"hello world"` to uppercase[6]?
 
 ---
 
-### 4. `substring(start, end)`
-
-Similar to `slice()` but **doesn't support negative indices**.
-
-```js
-"JavaScript".substring(4, 10); // "Script"
-```
+**7.**  
+What does the `trim()` method do to a string[5][6]?
 
 ---
 
-### 5. `substr(start, length)`
+### **Medium (8–14)**
 
-Extracts a substring with a given length (deprecated, but still used).
-
-```js
-"JavaScript".substr(4, 6);  // "Script"
-```
+**8.**  
+What is the difference between `slice()` and `substring()` for strings[5][6]?
 
 ---
 
-### 6. `toUpperCase()` / `toLowerCase()`
-
-Converts the string to uppercase or lowercase.
-
-```js
-"hello".toUpperCase();  // "HELLO"
-"HELLO".toLowerCase();  // "hello"
-```
+**9.**  
+Given `let fruit = "banana";`, write code to find the index of the first and last occurrence of `"a"`[6].
 
 ---
 
-### 7. `includes(substring)`
-
-Returns `true` if the string contains the substring.
-
+**10.**  
+Write code to extract the word `"Mango"` from this string using `slice()`:
 ```js
-"JavaScript".includes("Script");  // true
+let str = "kiwi, Mango, Orange";
 ```
+
 
 ---
 
-### 8. `startsWith()` / `endsWith()`
-
-Checks whether the string starts or ends with the given substring.
-
-```js
-"JavaScript".startsWith("Java");  // true
-"JavaScript".endsWith("Script");  // true
-```
+**11.**  
+How do you split the string `"red,green,blue"` into an array of colors[5][6]?
 
 ---
 
-### 9. `indexOf()` / `lastIndexOf()`
-
-Returns the position of the first/last occurrence of a value.
-
-```js
-"banana".indexOf("a");      // 1
-"banana".lastIndexOf("a");  // 5
-```
+**12.**  
+Write a line of code to check if the string `"apple"` starts with `"a"` and ends with `"e"`[6].
 
 ---
 
-### 10. `replace(searchValue, newValue)`
-
-Replaces the first match by default (use regex with `g` flag for all).
-
-```js
-"apple banana apple".replace("apple", "orange"); // "orange banana apple"
-"apple banana apple".replace(/apple/g, "orange"); // "orange banana orange"
-```
+**13.**  
+How do you replace the first occurrence of `"cat"` with `"dog"` in the string `"cat and cat"`[6]?
 
 ---
 
-### 11. `trim()` / `trimStart()` / `trimEnd()`
-
-Removes whitespace from both ends of a string.
-
+**14.**  
+What is the result of this code?  
 ```js
-"  hello world  ".trim();     // "hello world"
-"  hello world  ".trimStart(); // "hello world  "
+let str = "Ha!";
+console.log(str.repeat(3));
 ```
+_Explain your answer[6]._
 
 ---
 
-### 12. `split(separator, limit?)`
+### **Hard (15–20)**
 
-Splits a string into an array based on a separator.
-
-```js
-"red,green,blue".split(","); // ["red", "green", "blue"]
-```
+**15.**  
+Write a function that returns `true` if a given input is a string, and `false` otherwise[1].
 
 ---
 
-### 13. `repeat(n)`
-
-Repeats the string `n` times.
-
-```js
-"Hi ".repeat(3);  // "Hi Hi Hi "
-```
+**16.**  
+Given `let str = "  hello world  ";`, write code to remove only the whitespace at the start of the string[6].
 
 ---
 
-### 14. `padStart(targetLength, padString)` / `padEnd(...)`
-
-Pads the string to a certain length.
-
-```js
-"5".padStart(3, "0");  // "005"
-"5".padEnd(3, "*");    // "5**"
-```
+**17.**  
+How do you pad the string `"5"` on the left with zeros so that it becomes `"005"`[6]?
 
 ---
 
-### 15. `concat(...)`
-
-Joins strings together (less used today in favor of `+` or template literals).
-
-```js
-"Hello".concat(" ", "World"); // "Hello World"
-```
+**18.**  
+Given a string `let s = "😊";`, what will `s.length` return and why[6]?
 
 ---
 
-## 🧠 6. String Internals & Unicode
-
-* JavaScript uses **UTF-16 encoding**.
-* Characters outside the Basic Multilingual Plane (BMP), like emojis, are encoded using **surrogate pairs**.
-
-```js
-"😊".length; // 2 – it's actually two UTF-16 code units
-```
-
-Use `.codePointAt()` and `for...of` to handle such cases correctly.
+**19.**  
+Write code to convert the string `"hello world"` to `"Hello World"` (capitalize the first letter of each word).  
+_Hint: Use `split()`, `map()`, and `join()`._
 
 ---
 
-## 🧪 7. Useful Tips & Gotchas
-
-### Checking for Empty String
-
+**20.**  
+Explain why the following code returns `false`, and how you could fix it:  
 ```js
-if (str === "") // true for an empty string
+let x = "John";
+let y = new String("John");
+console.log(x === y);
 ```
 
-### Comparing Strings
-
-```js
-"apple" < "banana"  // true, lexicographic order
-```
-
-### String to Array to Modify Characters (workaround for immutability)
-
-```js
-let str = "hello";
-let arr = str.split("");
-arr[0] = "H";
-str = arr.join(""); // "Hello"
-```
 
 ---
 
-## 📚 8. Real-World Use Cases
-
-* **Sanitizing user input**: `.trim()`, `.toLowerCase()`
-* **Creating slugs**: `.toLowerCase().replace(/\s+/g, '-')`
-* **Keyword search**: `.includes()`, `.indexOf()`
-* **Formatting UI text**: `.padStart()`, `.repeat()`
-
----
+### ✅ **Bonus:**
+Try to answer all questions without running the code first. Then test your answers in a JavaScript environment to check your understanding!
 

@@ -1,0 +1,22 @@
+[{
+    "name":"Suraj",
+    "age":21,
+    "isMarried":null,
+    "address":{
+        "city":"Noida",
+        "nearBy":"Metro Station"
+    },
+    "hobbies":["Gym" , "Walking" , "Coffee"]
+  
+},
+{
+    "name":"Rohit",
+    "age":22,
+    "isMarried":null,
+    "address":{
+        "city":"Noida",
+        "nearBy":"Metro Station"
+    },
+    "hobbies":["Gym" , "Walking" , "Coffee"]
+}
+]
